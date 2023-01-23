@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const isAnagram = (str1, str2) => {
+        let a = str1.toLowerCase();
+        let b = str2.toLowerCase();
+
+        a = a.split("").sort().join("");
+        b = b.split("").sort().join("");
+
+        return a === b
+          ? `${str1} is anagram of ${str2}`
+          : `${str1} is not anagram of ${str2}`;
+      };
+      const first = prompt("Enter a string");
+      const second = prompt("Enter a string");
+      alert(isAnagram(first, second));
+    </script>
+  </body>
+</html>

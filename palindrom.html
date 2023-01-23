@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Basic Palindrom Program
+      //   const palindrom = (string) => {
+      //     let length = string.length;
+      //     let min = Math.floor(length / 2);
+      //     for (let i = 0; i < min; i++) {
+      //       if (string[i] !== string[length - 1 - i]) {
+      //         return false;
+      //       }
+
+      //       return true;
+      //     }
+      //   };
+      //   const string = prompt("Enter a string");
+      //   const value = palindrom(string);
+      //   console.log(value);
+
+      //Using reverse method of array
+      const isPalindrom = (str) => {
+        return str == str.split("").reverse().join("")
+          ? `${str} is palindrom`
+          : `${str} is not palindrom`;
+      };
+      const string = prompt("Enter a string");
+      alert(isPalindrom(string));
+    </script>
+  </body>
+</html>

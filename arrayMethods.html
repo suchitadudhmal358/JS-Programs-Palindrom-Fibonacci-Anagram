@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const fruits = ["Banana", "Orange", "Apple", "Mango"];
+      console.log(fruits.sort());
+      console.log(fruits.reverse());
+
+      const points = [40, 100, 1, 5, 25, 10];
+      //sort in ascending order
+      console.log(points.sort((a, b) => a - b));
+      //sort in descending order
+      console.log(points.sort((a, b) => b - a));
+
+      var objs = [
+        { first_nom: "Lazslo", last_nom: "Jamf", age: 20 },
+        { first_nom: "Pig", last_nom: "Bodine", age: 50 },
+        { first_nom: "Pirate", last_nom: "Prentice", age: 10 },
+      ];
+
+      console.log(
+        objs.sort((a, b) => {
+          if (a.last_nom > b.last_nom) {
+            return 1;
+          }
+          if (a.last_nom < b.last_nom) {
+            return -1;
+          }
+
+          return 0;
+        })
+      );
+      // console.log(objs.sort((a, b) => a.age - b.age));
+
+      const words = [
+        "spray",
+        "limit",
+        "elite",
+        "exuberant",
+        "destruction",
+        "present",
+      ];
+
+      console.log(words.slice(1, 5).sort());
+      console.log(words.filter((word) => word.length > 6));
+      console.log(words.find((word) => word === "present"));
+      console.log(words.findIndex((word) => word === "present"));
+
+      const array1 = [5, 2, 8, 130, 44];
+      console.log(Math.min(...array1));
+      console.log(Math.max(...array1));
+      console.log(array1.reduce((total, currentValue) => total + currentValue));
+    </script>
+  </body>
+</html>
